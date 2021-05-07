@@ -1,9 +1,9 @@
 import Discord from 'discord.js';
 import { config } from './config.js'
-
+import mongoose from 'mongoose';
 const client = new Discord.Client();
 const prefix = "!";
-
+console.log('Bot is ready')
 client.on("message", function (message) {
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
