@@ -7,7 +7,7 @@ import { CronJob } from 'cron'
 const client = new Discord.Client();
 
 const prefix = "!";
-var job = new CronJob('* * 7 * * *', async function () {
+var job = new CronJob('1 * * * * *', async function () {
     const channel = client.channels.cache.find(channel => channel.name === 'day6-quote-of-the-day')
     const qotdData = JSON.parse(fs.readFileSync('./data.json', { encoding: 'utf8', flag: 'r' }));
 
